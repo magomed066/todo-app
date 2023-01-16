@@ -1,12 +1,15 @@
 .sidebar {
     background: #fafafa;
     max-width: 300px;
-    width: 100%;
+    width: 0;
+    height: calc(100vh - 44px);
     padding: 30px 20px;
     transition: transform .1s ease;
     transform: translateX(-300px);
 
+
     &.opened {
+        width: 100%;
         transform: translateX(0);
     }
 
@@ -26,9 +29,16 @@
             font-size: 15px;
             cursor: pointer;
 
+
+            &.active {
+                background: #eee;
+            }
+
             &:hover {
                 background: #eee;
             }
+
+
         }
     }
 
@@ -105,4 +115,6 @@
 
         padding: 10px;
     }
+
+
 }

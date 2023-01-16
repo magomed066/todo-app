@@ -1,0 +1,23 @@
+.empty {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .desc {
+            width: 200px;
+            line-height: 1.3;
+        }
+    }
+}

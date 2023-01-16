@@ -1,13 +1,12 @@
-import { Content, Header } from './components'
-import { SidebarContext } from './contexts'
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './pages/routes'
 
 const App = () => {
 	return (
 		<div className="app">
-			<SidebarContext.SidebarProvider>
-				<Header />
-				<Content />
-			</SidebarContext.SidebarProvider>
+			<BrowserRouter>
+				<Routes />
+			</BrowserRouter>
 		</div>
 	)
 }

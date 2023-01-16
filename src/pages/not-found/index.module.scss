@@ -1,0 +1,36 @@
+.not-found {
+    width: 100%;
+    height: calc(100vh - 44px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #202020;
+
+    .icon {
+        font-size: 140px;
+        color: #db4c3f;
+    }
+
+    .text {
+        font-size: 24px;
+    }
+
+    .btn {
+        background: #db4c3f;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: transform .1s ease-in-out;
+        border-radius: 5px;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+}
