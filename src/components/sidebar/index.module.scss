@@ -1,0 +1,108 @@
+.sidebar {
+    background: #fafafa;
+    max-width: 300px;
+    width: 100%;
+    padding: 30px 20px;
+    transition: transform .1s ease;
+    transform: translateX(-300px);
+
+    &.opened {
+        transform: translateX(0);
+    }
+
+    &__generic {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #202020;
+            font-weight: 400;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+
+            &:hover {
+                background: #eee;
+            }
+        }
+    }
+
+    &__middle {
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 15px;
+
+
+            &:hover {
+                background: #eee;
+            }
+
+            h2 {
+                font-size: 15px;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            &:hover {
+                .middle__actions {
+                    opacity: 1;
+                }
+            }
+
+            .middle__actions {
+                opacity: 0;
+                transition: .2s all;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                span {
+                    cursor: pointer;
+                    color: #202020;
+                }
+
+                &-add {
+                    font-size: 18px;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+
+                &-toggler {
+                    transform: rotate(90deg);
+                    transition: .1s all;
+
+                    &.active {
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+    }
+
+    &__projects {
+
+        height: 0;
+        transition: height .2s;
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+            height: 300px;
+        }
+
+        padding: 10px;
+    }
+}
