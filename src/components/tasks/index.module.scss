@@ -1,5 +1,39 @@
 .tasks {
     width: 100%;
-    height: calc(100vh - 44px);
     transition: width .2s;
+
+    overflow-y: auto;
+
+    &__add {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 15px;
+        cursor: pointer;
+
+        span {
+            font-weight: 300;
+        }
+
+        .plus {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        &:hover {
+            color: #db4c3f;
+
+            .plus {
+
+                background: #db4c3f;
+                color: #fff;
+            }
+        }
+    }
 }

@@ -1,7 +1,12 @@
 import React from 'react'
+import { Tasks } from '../../components'
 
 const Inbox = () => {
-	return <div>Inbox page</div>
+	return (
+		<div>
+			<Tasks />
+		</div>
+	)
 }
 
 export default Inbox
